@@ -65,8 +65,13 @@ Scikit-learn, Pandas, NumPy
 **Authors**
 
 Om Hojage
+
 Omkar Waghade
+
 Atharva Padwal
+
 Arnav Pachori
+
 Avishkar Padwal
+
 Dr. Kiran More (Guide)
