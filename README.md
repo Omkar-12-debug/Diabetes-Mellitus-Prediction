@@ -36,7 +36,7 @@ The system is designed to deliver:
 
 ## 🏗️ System Architecture
 
-![Architecture](docs/architecture.png)
+![Architecture](docs/Architecture_diagram.png)
 
 ---
 
@@ -101,10 +101,10 @@ The dataset includes medical attributes such as:
 ## 📸 Screenshots
 
 ### Home Page
-![Home](docs/screenshots/home.png)
+![Home](docs/Screenshots/home.png)
 
 ### Prediction Result
-![Result](docs/screenshots/result.png)
+![Result](docs/Screenshots/Prediction_result.png)
 
 ---
 
