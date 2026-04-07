@@ -1,77 +1,133 @@
-# Diabetes-Mellitus-Prediction
+# 🩺 Diabetes Mellitus Prediction System
 
-**Predictive Analysis of Diabetes Mellitus using Data Mining Algorithms**
+Predictive Analysis of Diabetes Mellitus using Data Mining Algorithms
 
-This project presents a web-based system that predicts the likelihood of Diabetes Mellitus in individuals using classic data mining classification techniques. The objective is to enable early diagnosis and improve healthcare interventions through interpretable and accessible models.
+---
 
-**Overview**
+## 📌 Overview
 
-Diabetes Mellitus (DM) is a chronic disease affecting millions globally. This project leverages data mining algorithms—specifically Decision Tree, Naïve Bayes, and Random Forest—to build predictive models based on patient health attributes. The system is designed to deliver accurate, interpretable, and real-time predictions, and is integrated into a user-friendly web application using Flask.
+Diabetes Mellitus (DM) is a chronic disease affecting millions globally.  
+This project presents a web-based system that predicts the likelihood of diabetes using classic data mining classification techniques.
 
-**Algorithms Used**
+The system is designed to deliver:
+- Accurate predictions
+- Interpretable results
+- Real-time user interaction via a Flask web application
 
-Decision Tree
-Naïve Bayes
-Random Forest (Best performer with 96.97% accuracy)
+---
 
-**Dataset**
+## 🚀 Features
 
-The dataset includes medical records with features such as:
+- Reliable prediction system with **96.97% accuracy**
+- Real-time prediction using trained ML model
+- Simple and intuitive user interface
+- Risk classification (Low / Medium / High)
+- Easily extendable for future improvements
 
-Age
-Body Mass Index (BMI)
-HbA1c level
-Blood glucose level
-History of hypertension and heart disease
-Target: Presence (1) or Absence (0) of Diabetes
+---
 
-**Methodology**
+## 🧠 Algorithms Used
 
-Data Preprocessing: Handle missing values, normalize features, encode categories.
-Model Training: Train Decision Tree, Naïve Bayes, and Random Forest on a 70:30 train-test split.
-Model Evaluation: Use Accuracy, Precision, Recall, and F1-score for performance measurement.
-Web Deployment: Integrate the best model (Random Forest) into a Flask-based web app.
-User Interaction: Web interface (HTML/CSS/JS) takes user input and displays prediction results.
+- Decision Tree  
+- Naïve Bayes  
+- Random Forest (**Best Performer**)
 
-**Features**
+---
 
-Reliable prediction system with 96.97% accuracy
-Simple and clear user interface
-Real-time results
-Easy deployment and integration
-Open for further improvement (real-time data, more features, cloud deployment)
+## 🏗️ System Architecture
 
-**Results**
+![Architecture](docs/architecture.png)
 
-Model	            Accuracy	    Precision	     Recall	      F1 Score
-Decision Tree	     93.78%    	    Good	        Good	        Good
-Naïve Bayes	       91.89%	       Moderate	      Good	        Fair
-Random Forest	     96.97%	      Excellent	    Excellent	    Excellent
+---
 
-**Future Scope**
+## 🔄 Workflow / ML Pipeline
 
-Integration of live Electronic Health Records (EHR)
-More health metrics (e.g., insulin levels, cholesterol)
-Mobile app development
-Real-time cloud-based deployment
+![Workflow](docs/workflow.png)
 
-**Technologies Used**
+---
 
-Python
-Flask
-HTML / CSS / JavaScript
-Scikit-learn, Pandas, NumPy
+## 📊 Dataset
 
-**Authors**
+The dataset includes medical attributes such as:
 
-Om Hojage
+- Age  
+- Body Mass Index (BMI)  
+- HbA1c level  
+- Blood glucose level  
+- Hypertension  
+- Heart disease  
 
-Omkar Waghade
+**Target Variable:**
+- 1 → Diabetic  
+- 0 → Non-diabetic  
 
-Atharva Padwal
+---
 
-Arnav Pachori
+## ⚙️ Methodology
 
-Avishkar Padwal
+1. **Data Preprocessing**
+   - Handle missing values  
+   - Normalize features  
+   - Encode categorical data  
 
-Dr. Kiran More (Guide)
+2. **Model Training**
+   - Train Decision Tree, Naïve Bayes, Random Forest  
+   - 70:30 train-test split  
+
+3. **Model Evaluation**
+   - Accuracy  
+   - Precision  
+   - Recall  
+   - F1-score  
+
+4. **Model Selection**
+   - Random Forest selected as best model  
+
+5. **Web Deployment**
+   - Flask-based web application  
+
+---
+
+## 📈 Results
+
+| Model           | Accuracy | Performance |
+|----------------|---------|------------|
+| Decision Tree  | 93.78%  | Good       |
+| Naïve Bayes    | 91.89%  | Moderate   |
+| Random Forest  | **96.97%** | Excellent |
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Home](docs/screenshots/home.png)
+
+### Prediction Result
+![Result](docs/screenshots/result.png)
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/Diabetes-Mellitus-Prediction.git
+cd Diabetes-Mellitus-Prediction
+```
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### 3. Train the model
+```bash
+python backend/utils/train_model.py
+```
+### 4. Run the application
+```bash
+python backend/app.py
+```
+### 5. Open in browser
+```bash
+http://127.0.0.1:5000/
+```
