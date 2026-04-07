@@ -103,9 +103,17 @@ The dataset includes medical attributes such as:
 ### Home Page
 ![Home](docs/Screenshots/home.png)
 
-### Prediction Result
-![Result](docs/Screenshots/Prediction_result.png)
 
+## 📊 Risk Level Predictions
+
+### 🟢 Low Risk
+![Low Risk](docs/Screenshots/low_risk.png)
+
+### 🟡 Medium Risk
+![Medium Risk](docs/Screenshots/medium_risk.png)
+
+### 🔴 High Risk
+![High Risk](docs/Screenshots/high_risk.png)
 ---
 
 ## ⚙️ Installation & Setup
