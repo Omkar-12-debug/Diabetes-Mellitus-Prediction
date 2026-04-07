@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Methodology | DiabetesPredict</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>DiabetesPredict</h1>
+        <p>Early detection for better health</p>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Diabetes</a></li>
+          <li><a href="/methodology" class="active">Our Methodology</a></li>
+          <li><a href="/predict" class="predict-btn">Predict Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-page">
+    <h1>Our Prediction Methodology</h1>
+    
+    <section class="card">
+      <h2>Data Collection and Preprocessing</h2>
+      <p>We use the Diabetes dataset of around 1,00,000 entries which contains several medical predictor variables. The dataset undergoes rigorous preprocessing including:</p>
+      <ul>
+        <li>Handling missing values</li>
+        <li>Data normalization</li>
+        <li>Feature selection</li>
+        <li>Data balancing</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Machine Learning Algorithms</h2>
+      <div class="algorithms-grid">
+        <div>
+          <h3>Decision Tree</h3>
+          <p>A tree-like model of decisions that predicts the target value by learning simple decision rules inferred from the data features.</p>
+          <p><strong>Advantages:</strong> Easy to interpret, handles both numerical and categorical data, requires little data preparation.</p>
+        </div>
+        <div>
+          <h3>Naïve Bayes</h3>
+          <p>A probabilistic classifier based on applying Bayes' theorem with strong (naïve) independence assumptions between the features.</p>
+          <p><strong>Advantages:</strong> Fast prediction, works well with high-dimensional data, requires small amount of training data.</p>
+        </div>
+        <div>
+          <h3>Random Forest</h3>
+          <p>An ensemble learning method that operates by constructing multiple decision trees and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees.</p>
+          <p><strong>Advantages:</strong> Handles high dimensionality well, works well with both numerical and categorical data, performs well on datasets with missing values.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Model Evaluation</h2>
+      <p>Our models are evaluated using standard metrics to ensure accuracy and reliability:</p>
+      <div class="metrics-grid">
+        <div>
+          <h3>Accuracy</h3>
+          <p>Measures the proportion of correct predictions among the total number of cases examined.</p>
+        </div>
+        <div>
+          <h3>Precision and Recall</h3>
+          <p>Precision measures the proportion of positive identifications that were correct. Recall measures the proportion of actual positives that were identified correctly.</p>
+        </div>
+        <div>
+          <h3>F1 Score</h3>
+          <p>The harmonic mean of precision and recall, providing a balance between the two metrics.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2023 DiabetesPredict | For educational purposes only</p>
+      <p>🔍 Empowering early diagnosis through smart data</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

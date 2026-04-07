@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Prediction System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>DiabetesPredict</h1>
+        <p>Early detection for better health</p>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/about">About Diabetes</a></li>
+          <li><a href="/methodology">Our Methodology</a></li>
+          <li><a href="/predict" class="predict-btn">Predict Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero-section">
+    <div class="hero-content">
+      <h1>Predict Your Diabetes Risk</h1>
+      <p>Our advanced machine learning system helps assess your risk of diabetes based on key health indicators.</p>
+      <a href="/predict" class="cta-button">Check Your Risk Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://static.vecteezy.com/system/resources/previews/024/652/661/non_2x/a-young-smiling-doctor-holds-a-glucometer-in-his-hands-for-measuring-sugar-world-diabetes-day-vector.jpg" alt="Diabetes awareness">
+    </div>
+  </main>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>Quick Assessment</h3>
+      <p>Get your diabetes risk prediction in minutes by answering simple health questions.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Advanced Algorithms</h3>
+      <p>Powered by Decision Tree and Naïve Bayes algorithms for accurate predictions.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Privacy Focused</h3>
+      <p>Your data remains confidential and is never stored permanently.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2023 DiabetesPredict | For educational purposes only</p>
+      <p>🔍 Empowering early diagnosis through smart data</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Results | DiabetesPredict</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>DiabetesPredict</h1>
+        <p>Early detection for better health</p>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Diabetes</a></li>
+          <li><a href="/methodology">Our Methodology</a></li>
+          <li><a href="/predict" class="predict-btn">Predict Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="results-page">
+    <h1>Your Diabetes Risk Assessment</h1>
+    
+    <div class="result-card {% if prediction == 1 %}high-risk{% else %}low-risk{% endif %}">
+  <h2>Prediction Result</h2>
+  <div class="result-content">
+    <div class="probability">
+      <h4>Probability of Diabetes:</h4>
+      <div class="probability-bar">
+        <div class="probability-fill" style="width: {{ probability }}%"></div>
+      </div>
+      <p class="probability-value">{{ probability }}% ({{ risk_level }} Risk)</p>
+    </div>
+    
+    {% if prediction == 1 %}
+      <div class="risk-indicator high">
+        <span class="risk-icon">⚠️</span>
+        <h3>Higher Risk of Diabetes</h3>
+      </div>
+      <p class="risk-description">Based on the information provided, our model indicates you may be at higher risk for diabetes with a {{ probability }}% probability.</p>
+    {% else %}
+      <div class="risk-indicator low">
+        <span class="risk-icon">✅</span>
+        <h3>Lower Risk of Diabetes</h3>
+      </div>
+      <p class="risk-description">Based on the information provided, our model indicates you may be at lower risk for diabetes with a {{ probability }}% probability.</p>
+    {% endif %}
+    
+    <div class="result-details">
+      <h4>Key Factors:</h4>
+      <ul>
+        <li><strong>Age:</strong> {{ age }} years</li>
+        <li><strong>BMI:</strong> {{ bmi }}</li>
+        <li><strong>Blood Glucose:</strong> {{ blood_glucose_level }} mg/dL</li>
+        <li><strong>HbA1c Level:</strong> {{ HbA1c_level }}%</li>
+        <li><strong>Hypertension:</strong> {% if hypertension == 1 %}Yes{% else %}No{% endif %}</li>
+        <li><strong>Heart Disease:</strong> {% if heart_disease == 1 %}Yes{% else %}No{% endif %}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    <div class="recommendations">
+      <h3>Next Steps</h3>
+      {% if prediction == 1 %}
+        <p>We recommend consulting with a healthcare professional for further evaluation. Early detection and lifestyle changes can significantly reduce diabetes risk.</p>
+        <ul>
+          <li>Schedule a check-up with your doctor</li>
+          <li>Monitor your blood sugar levels regularly</li>
+          <li>Consider dietary changes and increased physical activity</li>
+        </ul>
+      {% else %}
+        <p>While your current risk appears lower, maintaining healthy habits is important for prevention:</p>
+        <ul>
+          <li>Continue regular health check-ups</li>
+          <li>Maintain a balanced diet and healthy weight</li>
+          <li>Stay physically active</li>
+        </ul>
+      {% endif %}
+    </div>
+    
+    <div class="actions">
+      <a href="/predict" class="btn">New Assessment</a>
+      <a href="/" class="btn secondary">Return Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2023 DiabetesPredict | For educational purposes only</p>
+      <p>🔍 Empowering early diagnosis through smart data</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

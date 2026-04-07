@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Diabetes | DiabetesPredict</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>DiabetesPredict</h1>
+        <p>Early detection for better health</p>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about" class="active">About Diabetes</a></li>
+          <li><a href="/methodology">Our Methodology</a></li>
+          <li><a href="/predict" class="predict-btn">Predict Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-page">
+    <h1>Understanding Diabetes</h1>
+    
+    <section class="card">
+      <h2>What is Diabetes?</h2>
+      <p>Diabetes mellitus is a chronic disease that occurs when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces. Insulin is a hormone that regulates blood sugar. Hyperglycemia, or raised blood sugar, is a common effect of uncontrolled diabetes and over time leads to serious damage to many of the body's systems, especially the nerves and blood vessels.</p>
+    </section>
+
+    <section class="card">
+      <h2>Types of Diabetes</h2>
+      <div class="diabetes-types">
+        <div>
+          <h3>Type 1 Diabetes</h3>
+          <p>Previously known as insulin-dependent or childhood-onset diabetes, characterized by deficient insulin production.</p>
+        </div>
+        <div>
+          <h3>Type 2 Diabetes</h3>
+          <p>Results from the body's ineffective use of insulin. Most common type of diabetes.</p>
+        </div>
+        <div>
+          <h3>Gestational Diabetes</h3>
+          <p>Hyperglycemia that is first recognized during pregnancy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Symptoms and Complications</h2>
+      <div class="symptoms-grid">
+        <div>
+          <h3>Common Symptoms</h3>
+          <ul>
+            <li>Increased thirst and hunger</li>
+            <li>Frequent urination</li>
+            <li>Fatigue</li>
+            <li>Blurred vision</li>
+            <li>Slow-healing wounds</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Potential Complications</h3>
+          <ul>
+            <li>Cardiovascular disease</li>
+            <li>Nerve damage (neuropathy)</li>
+            <li>Kidney damage (nephropathy)</li>
+            <li>Eye damage (retinopathy)</li>
+            <li>Foot damage</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2023 DiabetesPredict | For educational purposes only</p>
+      <p>🔍 Empowering early diagnosis through smart data</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
