@@ -1,4 +1,4 @@
-# 🩺 Diabetes Mellitus Prediction System
+# 🩺 Diabetes Mellitus Prediction  System
 
 Predictive Analysis of Diabetes Mellitus using Data Mining Algorithms
 
